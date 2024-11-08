@@ -13,17 +13,17 @@
     }
 
     .myname {
-        font-size: 3.5rem;
+        font-size: 4rem;
         margin-bottom: 2.5rem;
     }
 
     .resume-h3 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin: 1rem;
     }
 
     .card-header {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .card-header h3 {
@@ -36,7 +36,7 @@
     }
 
     .skill-list {
-        font-size: 1.1rem;
+        font-size: 1.7rem;
     }
 
     .right-div, .left-div {
@@ -51,6 +51,12 @@
         width: 95%;
     }
 
+    .left-1 p{
+        margin: 1rem 0px;
+    }
+    .left-1 {
+        font-size: 1.5rem;
+    }
     .location{
         margin-right: 2px;
     } 

@@ -40,7 +40,15 @@
     }
 
     .skill-list {
-        font-size: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .left-1 p{
+        margin: 1rem 0px;
+    }
+    .left-1 {
+        font-size: 1.5rem;
+        
     }
 
     .right-div, .left-div {
@@ -50,6 +58,7 @@
     a {
         font-size: 1rem;
     }
+
 
     .contact-div {
         width: 100%;

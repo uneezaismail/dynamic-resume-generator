@@ -40,7 +40,14 @@
     }
 
     .skill-list {
-        font-size: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .left-1 p{      
+        margin: 1rem 0px;
+    }
+    .left-1 {
+        font-size: 1.3rem;
     }
 
     .right-div, .left-div {

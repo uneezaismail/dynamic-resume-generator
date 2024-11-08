@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="xl-devices.css">
+    <link rel="stylesheet" href="md-devices.css">
+    <link rel="stylesheet" href="sm-devices.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <div class="resume-form" id="resumeForm">
+    <div class="G-name">
+    <h1>Resume Generator</h1>
+    <p>By Uneeza Ismail</p>
+</div>
+
+<form action="" id="resumeForm">
+<div class="main-div">
+    <div class="left">
+    
+        <h3>Personal Information</h3>
+        <div class="form-group">
+            <label for="Fname">First Name</label>
+            <input type="text" id="Fname"  placeholder="Enter first Name" required>
+        </div>
+        <div class="form-group">
+            <label for="Lname">Last Name</label>
+            <input type="text" id="Lname"  placeholder="Enter last Name" required>
+        </div>
+        <div class="form-group">
+            <label for="contact">Your Contact</label>
+            <input type="text" id="contact" placeholder="Enter Your Contact" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Your Address</label>
+            <textarea name="address" id="address" placeholder="Enter You Address" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="profile">Profile Image</label>
+            <input type="file" name="profile" id="profile">
+        </div>
+    
+   
+        <p>Important Links</p>
+        <div class="form-group">
+            <label for="facebook">Facebook</label>
+            <input type="text" id="facebook" placeholder="Enter Here" required>  
+        </div>
+        <div class="form-group">
+            <label for="linkedin">LinkedIn</label>
+            <input type="text" id="linkedin" placeholder="Enter Here" >  
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Here" required>  
+        </div>
+</div>
+<div class="right">
+    <h3>Professional Information</h3>
+    <div class="form-group">
+        <label for="objective">Objective</label>
+        <textarea name="objective" id="objective" placeholder="Enter Your Objective" rows="4" required></textarea>
+    </div>
+    <div class="form-group"  id='wexp-container'>
+        <label for="wexp" >Work Experience</label>
+        <textarea name="wexp" id="wexp" class="weField" placeholder="Enter Your Experience" rows="4" required></textarea>
+        <div class="btn">
+            <button type="button" class="addbtn" id="add-work" onclick="addNewWeField()"> Add</button>
+        </div>
+    </div>
+    <div class="form-group" id="aq-container">
+        <label for="academic">Academic Qualification</label>
+        <textarea name="academic" id="academic" class="aqField" placeholder="Enter Your Qualification" rows="4" required></textarea>
+        <div class="btn">
+            <button type="button" class="addbtn" id="add-academic" onclick="addNewAqField()"> Add</button>
+        </div>       
+    </div>
+    <div class="form-group" id="sk-container">
+        <label for="skills">Skills</label>
+        <textarea name="skills" id="skills" class="skField" placeholder="Enter Your Skills" rows="2" required></textarea>
+        <div class="btn">
+            <button type="button" class="addbtn" id="add-skill" onclick="addNewSkField()"> Add</button>
+        </div>       
+    </div>
+</div>
+</div>
+<div class="generate-btn btn"> <button id="generate-button" type="submit">Generate Resume</button> <button type="reset">Reset</button></div>
+</form>
+</div>
+
+
+
+<div id="container" class="resume-template">
+<div class="left-div">
+    <div class="img-div">
+    <img class="myimg" id="Pimg" src="https://media.istockphoto.com/id/610003972/vector/vector-businessman-black-silhouette-isolated.jpg?s=612x612&w=0&k=20&c=Iu6j0zFZBkswfq8VLVW8XmTLLxTLM63bfvI6uXdkacM=" alt="default-image">
+</div>
+    <div class="left-div-data">
+        <div>
+            <div class="left-1">
+                <p  id="f-name" style="margin-right: 6px;" >Uneeza</p>
+                <p  id="l-name" >Ismail</p>
+            </div>
+        <div class="left-1 icon-div"><i class="fa-solid fa-mobile-screen" style="margin-right: 10px;"></i><p id="contact-no">+92678687645</p></div>
+        
+        <div class="left-1 icon-div" ><i class="fa-solid fa-location-dot location" ></i><p id="adrs">6372 sector bahria Karachi, Pakistan</p></div>
+        
+        <hr>
+    </div>
+    <div class="contact-div">
+        <h3 class="resume-h3">Contact Us</h3>
+        <div class="icon-div"><i class="fa-brands fa-facebook" style="margin-right: 10px;"></i><p><a href="" id="fb"></i>https://www.facebook.com</a></p></div>
+        <div class="icon-div" id="linked"><i class="fa-brands fa-linkedin"  style="margin-right: 10px;"></i><p><a href="" id="link"></a></p></div>       
+        <div class="icon-div"><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i><p><a href="" id="g-mail">https://www@gmail.com</a></p></div>
+        <hr>
+    </div>
+    <div class="sk-div">
+        <h3 class="resume-h3">Skills</h3>
+       <ul class="skill-list" id="sk-li">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>TYPESCRIPT</li>
+       </ul>
+    </div>
+    </div>
+</div>
+<div class="right-div">
+    <div style="display: flex; align-items: center; ">
+        <h1 class="myname name1" id="generatedFName">Uneeza</h1>
+        <h1 class="myname name2" id="generatedLName">Ismail</h1>
+    </div>
+    
+
+    <div class="objective-card">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-compass" style="margin-right: 10px;"></i>Career Objective</h3>
+        </div>
+        <div class="card-body" id="objective-b">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim voluptatum corporis perferendis nulla? Impedit, rerum quia. Molestiae, ipsum. Soluta quibusdam pariatur odit temporibus, quisquam sunt cumque, repellendus laudantium sequi nobis aliquid porro similique tempore eaque molestias eius, maxime autem rerum.</p>
+        </div>
+    </div>
+    <div class="objective-card">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-medal" style="margin-right: 10px;"></i>Work Experience</h3>
+        </div>
+        <div class="card-body">
+            <ul class="we-li" id="work-li">
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolores pariatur distinctio saepe, magnam laborum iusto voluptatem maiores dolorem voluptate!</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolores pariatur distinctio saepe, magnam laborum iusto voluptatem maiores dolorem voluptate!</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolores pariatur distinctio saepe, magnam laborum iusto voluptatem maiores dolorem voluptate!</li>
+               </ul>
+        </div>
+    </div>
+    <div class="objective-card">
+        <div class="card-header">
+            <h3 class="qualify-h3"><i class="fa-solid fa-graduation-cap"></i> Acadamic Qualification</h3>
+        </div>
+        <div class="card-body aq" id="aq-li">
+            <ul>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolores pariatur distinctio saepe, magnam laborum iusto voluptatem maiores dolorem voluptate!</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolores pariatur distinctio saepe, magnam laborum iusto voluptatem maiores dolorem voluptate!</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolores pariatur distinctio saepe, magnam laborum iusto voluptatem maiores dolorem voluptate!</li>
+               </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

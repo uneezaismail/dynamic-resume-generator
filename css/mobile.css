@@ -1,11 +1,11 @@
-@media (min-width: 576px) and (max-width: 767px) {
+@media (max-width: 575px) {
     #container {
-        width: 97%;
-        grid-template-columns: 1.2fr 2fr;
+        width: 96%;
+        grid-template-columns:1fr;
     }
 
 
-    .left-div{
+    .left-div , .right-div{
         width: 97%;    
     }
     .myimg {
@@ -13,17 +13,17 @@
     }
 
     .myname {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
     }
 
     .resume-h3 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         margin: 0.5rem;
     }
 
     .card-header {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .card-header h3 {
@@ -43,28 +43,35 @@
         font-size: 1.5rem;
     }
 
-    .left-1 p{      
+    .left-1 p{
         margin: 1rem 0px;
     }
+    
     .left-1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        
     }
 
     .right-div, .left-div {
         padding: 0.5rem;
     }
 
-    a {
-        font-size: 1rem;
+    .icon-div{
+        font-size: 1.2rem;
     }
 
+    .icon-div a{
+    margin: 0.8rem 0px;
+    }
+
+
     .contact-div {
-        
+        width: 100%;
         align-items: center;
     }
 
     .contact-div h3{
-        width: 95%;
+        width: 97%;
     }
 
     .img-div {
